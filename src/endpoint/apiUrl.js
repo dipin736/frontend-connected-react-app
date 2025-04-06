@@ -1,3 +1,3 @@
-export const BaseUrl = "http://127.0.0.1:8000/api/auth"; 
-export const BaseUrlProfile = "http://127.0.0.1:8000"; 
+export const BaseUrl = "https://connected-0ggq.onrender.com/api/auth"; 
+export const BaseUrlProfile = "https://connected-0ggq.onrender.com"; 
 

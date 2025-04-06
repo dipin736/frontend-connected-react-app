@@ -118,7 +118,7 @@ const ChatSystem = () => {
       });
 
     const ws = new WebSocket(
-      `ws://127.0.0.1:8000/ws/chat/${myUserId}/${selectedUser.id}/?token=${token}`
+      `wss://connected-0ggq.onrender.com/ws/chat/${myUserId}/${selectedUser.id}/?token=${token}`
     );
 
     ws.onmessage = (e) => {
@@ -142,7 +142,7 @@ const ChatSystem = () => {
   useEffect(() => {
     if (!myUserId || !token) return;
 
-    const socketUrl = `ws://127.0.0.1:8000/ws/online/${myUserId}/?token=${token}`;
+    const socketUrl = `wss://connected-0ggq.onrender.com/ws/online/${myUserId}/?token=${token}`;
 
 
     const onlineSocket = new WebSocket(socketUrl);
