@@ -1,0 +1,5 @@
+/* Customize the active tab indicator */
+.MuiTabs-indicator {
+  background-color: #3f51b5; /* Change the color of the indicator */
+  height: 4px; /* Adjust the thickness of the indicator */
+}
