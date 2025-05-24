@@ -1,7 +1,10 @@
-name: Deploy React App to Netlify
+name: CI Pipeline
 
 on:
   push:
+    branches:
+      - main
+  pull_request:
     branches:
       - main
 
@@ -9,27 +12,18 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
+      - name: Checkout repository
         uses: actions/checkout@v2
 
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '18'  # Recommended minimum version for Vite
+          node-version: '18'  # Ensure the Node version matches your local setup
 
       - name: Install dependencies
         run: |
           npm install
-          npm install vite-plugin-node-polyfills --save-dev
 
       - name: Build React app
         run: |
           npm run build
-
-      - name: Install Netlify CLI
-        run: |
-          npm install -g netlify-cli
-
-      - name: Deploy to Netlify
-        run: |
-          netlify deploy --prod --dir=build --site=${{ secrets.fffd5c4f-ac07-41f5-84a0-091e644f314e }} --auth=${{ secrets.nfp_7WmzJzotMErUzRLrq26jKDTgf3XETjj22e09 }}
