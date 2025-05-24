@@ -29,6 +29,7 @@ jobs:
       - name: Deploy to Netlify
         run: |
           npm install -g netlify-cli
-          netlify deploy --prod --dir=build --site=${{ secrets.nfp_6DCVF28isnZjT2c3bVEXdJzq5siXV9kM361e }} --auth=${{ secrets.fffd5c4f-ac07-41f5-84a0-091e644f314e }}
+          netlify deploy --prod --dir=build --site=${{ secrets.fffd5c4f-ac07-41f5-84a0-091e644f314e }} --auth=${{ secrets.nfp_g2bBWr9etCr7yE2VDCqxepNVaH3Hgoo18553 }}
         env:
           NODE_OPTIONS: '--openssl-legacy-provider'
+          
